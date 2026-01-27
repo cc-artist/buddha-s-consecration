@@ -1,3 +1,22 @@
 - 管理界面地址 ： http://localhost:3001/admin.html
 - 默认管理员账号 ：admin
-- 默认管理员密码 ：cyberbuddha202
+- 默认管理员密码 ：cyberbuddha2024
+
+
+以下是将开发项目在Netlify上部署的详细步骤：buddha-s-consecration.netlify.app
+
+创建Netlify账户：访问Netlify官网，点击右上角Signup，可通过GitHub、GitLab等第三方账号快速登录，或使用邮箱注册。注册后需验证邮箱，即可进入控制台2。
+准备项目文件：确保应用已完成开发并生成静态资源。对于Vue、React等框架项目，需执行构建命令生成输出目录——Vue项目通常生成dist文件夹，React项目生成build文件夹，静态HTML项目可直接使用根目录文件。若项目托管在GitHub等仓库，需确保代码已推送至远程仓库；本地项目则需整理为文件夹（压缩包需先解压）2。
+选择部署方式：Netlify提供多种部署方案，可根据项目存储位置灵活选择23：
+仓库连接部署（推荐，支持自动更新）：适合代码托管在GitHub、GitLab等平台的项目，支持提交代码后自动部署。登录Netlify控制台，点击Add new site→Import an existing project，选择代码仓库平台（如GitHub）并完成授权。从仓库列表中选择目标项目，配置部署参数：选择部署分支（通常为main），填写构建命令（如Vue项目npm run build，React项目yarn build），指定发布目录（如dist或build）。点击Deploysite，Netlify会自动拉取代码、执行构建并部署。部署完成后，会生成默认域名（格式为xxx.netlify.app），点击即可访问。
+本地文件上传部署：适合未托管在代码仓库的本地项目，操作简单直接。进入Netlify控制台，点击Add site→Import an existing project，选择Drag and drop your site folder。若项目未构建，需先本地执行构建命令生成输出目录。无需额外配置，Netlify自动检测文件结构并部署，完成后获取默认域名即可访问。
+模板/AI生成项目部署：适合从零开始的项目，可快速搭建并部署。点击Add new site→Start from a template，选择Netlify提供的预构建模板（如博客、官网模板），或使用框架starter代码。若使用AI生成的代码，需先将代码保存为本地文件夹，再通过拖拽上传方式部署，确保文件结构完整。
+部署后优化：免费计划已包含基础功能，进一步优化可提升专业性2：
+自定义域名绑定：进入站点设置→Domain management，点击Add custom domain，输入已购买的域名（如yourdomain.com）。在域名注册商处添加CNAME记录，指向Netlify默认域名，等待DNS解析生效（通常几分钟到几小时）。
+HTTPS配置：Netlify默认免费提供HTTPS证书，绑定自定义域名后自动启用，无需额外操作，保障访问安全。
+常见问题排查：部署过程中可能遇到失败情况，以下是高频问题及解决方案2：
+构建命令错误：检查构建命令是否与项目框架匹配（如Vue用npm run build而非yarn build），查看部署日志中的错误提示，修正netlify.toml配置或控制台设置。
+文件路径错误：确保发布目录填写正确（如dist而非dist/），若项目未生成输出目录，需本地执行构建命令。
+路由刷新404：React等框架的客户端路由需配置重定向，在项目根目录创建_redirects文件，添加内容/*/index.html 200即可解决。
+仓库权限不足：重新授权仓库访问，或使用Personal Access Token确保Netlify有拉取代码的权限。
+以上步骤涵盖了从准备到部署再到优化的全流程，帮助开发者在Netlify上顺利部署项目。如有其他问题，可参考Netlify官方文档或社区论坛获取更多支持。
