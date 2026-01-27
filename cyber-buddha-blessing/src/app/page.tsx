@@ -158,14 +158,7 @@ export default function Home() {
           <p className="text-2xl md:text-3xl mb-10 text-[#F5F5F7]/90">
             Cyber Buddha Consecration · Dharma Form · Lamp Blessing · Custom Tours of Famous Chinese Temples
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-[#8676B6] hover:bg-[#8676B6]/90 text-white px-8 py-4 rounded-full font-medium text-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300">
-              Start Blessing
-            </button>
-            <button className="bg-[#1D1D1F]/50 backdrop-blur-sm border border-[#8676B6]/50 hover:border-[#8676B6] text-[#8676B6] px-8 py-4 rounded-full font-medium text-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300">
-              Learn More
-            </button>
-          </div>
+
         </div>
       </section>
 
