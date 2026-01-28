@@ -1,3 +1,15 @@
+### 1. 检查Vercel部署配置
+
+* **根目录配置**：确保Vercel部署时指定了正确的根目录`cyber-buddha-blessing`
+
+* **构建命令配置**：确保构建命令设置为`npm run build`
+
+* **输出目录配置**：确保输出目录设置为`.next`
+
+
+
+
+
 - 管理界面地址 ： http://localhost:3001/admin.html
 - 默认管理员账号 ：admin
 - 默认管理员密码 ：cyberbuddha2024
