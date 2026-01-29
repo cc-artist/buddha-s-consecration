@@ -1,4 +1,6 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root {
   /* 赛博霓虹设计风格颜色方案 */
@@ -99,4 +101,3 @@ body::before {
 .animate-fadeIn {
   animation: fadeIn 0.6s ease-out forwards;
 }
-
